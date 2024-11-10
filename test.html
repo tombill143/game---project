@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outlined CSS Triangle</title>
+    <style>
+        body {
+            background-color: #1f8a73;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Outlined triangle */
+        .triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid white;
+    position: relative;
+}
+
+        .triangle::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    /* bottom: -25px; */
+    left: -40px;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 84px solid #1f8a73;
+}
+    </style>
+</head>
+<body>
+    <div class="triangle"></div>
+</body>
+</html>

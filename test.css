@@ -1,0 +1,27 @@
+body{
+    background-color: #00fa9a;
+
+}
+
+.triangle{
+    width: 12em;
+    height: 12em;
+    border: 1em solid #000;
+    position: absolute;
+    transform: translate(-50%, 050%) rotate(45deg);
+    left: 50%;
+    top: 50%; 
+    border-right: none;
+    border-bottom: none;   
+}
+
+.triangle:before{
+    position: absolute;
+    content: "";
+    border-top: 1em solid black;
+    width: calc(1.41 * (12em + 1em));
+    transform: rotate(-45deg);
+    left: -3.3em;
+    top: 5.35em;
+
+}

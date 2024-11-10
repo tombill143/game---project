@@ -1,0 +1,171 @@
+/* Import Story Milky font */
+@font-face {
+    font-family: "Story Milky";
+    src: url("../fonts/Story Milky.ttf") format("truetype"); /* Relative path to the fonts folder */
+    /* Alternatively, you can use the .otf file */
+    /* src: url("../fonts/Story Milky.otf") format("opentype"); */
+}
+
+/* Body styling for full-screen background */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url("./game-assets-20241010T122652Z-001/game-assets/SVG/cityscape-100.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* Makes background cover the viewport */
+    background-position: center;
+    margin: 0;
+    overflow: hidden; /* Prevents scrolling */
+    height: 100vh; /* Ensures full viewport height */
+}
+
+/* Main heading styling */
+h1 {
+    font-family: "Story Milky", Arial, sans-serif; /* Use Story Milky font */
+    font-size: 3em;  /* Adjust size for h1 */
+    letter-spacing: 8px;
+    background-color: rgb(255, 250, 175);
+    border: 4mm ridge rgba(255, 174, 0, 0.829);
+    padding: 10px;  /* Optional: add padding for styling */
+    font-weight: 100;
+}
+
+/* Secondary heading styling */
+h2 {
+    font-family: "Story Milky", Arial, sans-serif; /* Use Story Milky font */
+    font-size: 2em;
+    letter-spacing: 10px;
+    background-color: rgb(255, 250, 175);
+    border: 4mm ridge rgba(255, 174, 0, 0.829);
+    font-weight: 100;
+}
+
+
+/* Main menu styling */
+#main-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Game container styling */
+#game-container {
+    display: none; /* Start hidden */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center container */
+    width: 700px;
+    height: 830px;
+    border: 2px solid #55a9f8;
+    overflow: hidden;
+    background-image: url("./game-assets-20241010T122652Z-001/game-assets/SVG/gameboard-100.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Score and timer styling */
+#score, #timer {
+    font-size: 24px;
+    font-family: "Story Milky", Arial, sans-serif; /* Use Story Milky font */
+    font-weight: 100;
+
+}
+
+/* Objects container styling */
+#objects {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/* Individual object styling */
+.object {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    object-fit: contain;
+    
+}
+
+/* Correct and wrong object backgrounds */
+.correct {
+    background-image: url(./game-assets-20241010T122652Z-001/game-assets/SVG/head_1.svg);
+    background-repeat: no-repeat;
+    
+}
+
+.wrong {
+    background-image: url(./game-assets-20241010T122652Z-001/game-assets/SVG/head_2_1.svg);
+    background-repeat: no-repeat;
+}
+
+/* Game over container styling */
+#game-over {
+    margin-top: 20px;
+    display: none;
+}
+
+/* Button styling for various buttons */
+#start-game, #play-again, #exit-game {
+    color: white;
+    background-color: black;
+    border-radius: 12px;
+    padding: 10px;
+    width: 100px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: "Story Milky", Arial, sans-serif; /* Use Story Milky font */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add smooth transition */
+}
+
+#start-game:hover, #play-again:hover, #exit-game:hover {
+    background-color: rgba(255, 174, 0, 0.8); /* Light orange background on hover */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+/* Footer styling: fixed at the bottom of the page */
+footer {
+    position: fixed; /* Fixes it to the bottom */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px;
+    color: white; /* Text color */
+    display: none; /* Hidden by default */
+    font-family: "Story Milky", Arial, sans-serif; /* Use Story Milky font */
+    font-weight: 100;
+}
+
+/* Make footer visible */
+footer.footer-visible {
+    display: block;
+}
+
+/* Styling for the sound toggle button */
+.sound-button {
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    position: absolute; /* Position it at the top-right corner */
+    top: 10px;
+    right: 10px;
+}
+
+.sound-button:hover {
+    background-color: gray;
+}
+
+
